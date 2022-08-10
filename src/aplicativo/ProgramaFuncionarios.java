@@ -15,15 +15,16 @@ public class ProgramaFuncionarios {
      
      List<Funcionarios> lista = new ArrayList<>();
 
-     System.out.println("Entre com numero de funcionarios: ");
+     System.out.print("Entre com numero de funcionarios: ");
      int num = scan.nextInt();
-     scan.nextLine();
+     
      for(int i=0; i<num; i++) {
-    	   scan.nextLine();
-    	 System.out.println("Funcionário #" + (i+1) + " Informação"); 
+     scan.nextLine();
+    	 System.out.println("Funcionário #" + (i+1) + " Informação: "); 
     	 System.out.print("Funcionário terceirizado? "); 
-    	 String l = scan.nextLine();
-    	 if(l.equalsIgnoreCase("n")) {
+    	 String letra = scan.nextLine();
+    	 
+    	 if(letra.equalsIgnoreCase("n")) {
     		 System.out.print("Entrar com nome: ");
     		 String nome = scan.nextLine();
     		 System.out.print("Entrar com hora: ");
@@ -33,6 +34,7 @@ public class ProgramaFuncionarios {
     		 
     		 Funcionarios f = new Funcionarios(nome, hora, horaValor);
     		 lista.add(f);
+    	 
     	 } else {
     		 System.out.print("Entrar com nome: ");
     		 String nome = scan.nextLine();
@@ -46,10 +48,12 @@ public class ProgramaFuncionarios {
     		 lista.add(ft);
     	 }
      }
+     
+     System.out.println();
      System.out.println("Pagamentos:");
 	 for(Funcionarios x : lista) {
 		 System.out.println(x);
 	 }
+	 scan.close();
 	}
-
 }
