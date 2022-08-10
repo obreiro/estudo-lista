@@ -3,34 +3,53 @@ package aplicativo;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class EstudosLista {
 
 	public static void main(String[] args) {
-		
-		//Declarando variáveis e atribuindo valores valores
-				String texto1= "Modelo1";
-				String texto2= "Modelo2";
-				String texto3= "Modelo3";
+					
+//Estilo tsConfig do TypeScript
+				String aula1 = "Modelando aula";
+				String aula2 = "Conhecendo aula lista";
+				String aula3 = "Printando aulas";
 				
-				//declarando interface List e implentando classe
-				List<String> lista = new ArrayList<>();
+			    List<String> aulas = new ArrayList<>();
+				aulas.add(aula1);
+				aulas.add(aula2);
+				aulas.add(aula3);
 				
-				//implementando elementos na lista
+				System.out.println(aulas);
 				
-				lista.add(texto1);
-				lista.add(texto2);
-				lista.add(texto3);
+				System.out.println("");
+				System.out.println("Excluindo elementos");
+				aulas.remove(1);
+				System.out.println(aulas);
 				
-				//imprimindo elementos da lista
-				System.out.println(lista);
+				System.out.println();
+				System.out.println("Imprimindo pelo forEach");
 				
-				//imprimindo elementos da lista com for each
-				for(String x : lista) {
-					System.out.println(x);
+				for(String p : aulas) {
+					System.out.println(p);
 				}
 				
+				System.out.println();
+				System.out.println("Acesando Elementos");
 				
+				String acessando = aulas.get(2);
+				System.out.println("Acessando elemento da posição 2: " + "["+ acessando+"]");
+			
+				System.out.println();
+				System.out.println("Acesando Elementos pelo for");
+				for (int i = 0; i < aulas.size(); i++) {
+				    System.out.println("aula : " + aulas.get(i));
+				}
+				
+				System.out.println();
+				System.out.println("Removendo elemento M");
+				aulas.removeIf(x -> x.charAt(0) == 'M');
+				for(String a : aulas) {
+					 System.out.println("aula : " + a);
+				}
 
 	}
-
 }
