@@ -23,6 +23,13 @@ public class EstudosLista {
 				
 				//imprimindo elementos da lista
 				System.out.println(lista);
+				
+				//imprimindo elementos da lista com for each
+				for(String x : lista) {
+					System.out.println(x);
+				}
+				
+				
 
 	}
 
